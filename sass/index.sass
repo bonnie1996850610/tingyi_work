@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300')
+@import reset
+@import customize
+@import browserUpdate
+
+/* Set style
+ * ========================================================================== */
+
+.topic
+    position: relative
+    height: 100vh
+
+    .bg_font
+        position: absolute
+        top: 5%
+        left: 10%
+        color: #eff1f2
+        opacity: 0.8
+        z-index: 2
+        font-family: Arial, Helvetica, sans-serif
+        font-weight: 600
+        font-size: 15vw
+        mix-blend-mode: multiply
+
+        &:nth-child(2)
+            top: 45%
+            left: 55%
+            
+
+    .learn
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        z-index: 3
+
+        img
+            width: 50%
+            margin: 0 auto
+        
+    .bg1
+        position: absolute
+        top: 0
+        right: 0%
+        width: 30%
+        opacity: 0.8
+        z-index: 1
+        animation-name: MoveToRight
+        animation-duration: 2s
+
+        @keyframes MoveToRight
+            from
+                right: -100%
+                opacity: 0
+            to
+                right: 0%
+                opacity: 0.8
+
+    .bg2
+        position: absolute
+        top: 50%
+        left: 0%
+        transform: translateY(-50%)
+        width: 25%
+        z-index: 1
+        animation-name: MoveToLeft
+        animation-duration: 2s
+
+        @keyframes MoveToLeft
+            from
+                left: -100%
+                opacity: 0
+            to
+                left: 0%
+                opacity: 1
+
+#about
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    
+
+    .bg
+        position: absolute
+        top: 0
+        left: 0
+        background: #eff1f2
+        width: 50%
+        height: 300px
+        z-index: -1
+
+    .title
+        padding: 5% 10% 0 15%
+        width: 20%
+
+        h1
+            font-weight: 600
+            font-size: 2rem
+            letter-spacing: 2px
+            padding: 0 0 10px
+
+        h2
+            font-weight: 600
+
+    .cont
+        padding: 5% 0 0 0
+        width: 45%
+
+        p
+            line-height: 1.5
+            margin: 0 0 60px
+
+        .btn
+            position: relative
+            display: block
+            width: 80px
+            font-size: 1rem
+            font-weight: 600
+            letter-spacing: 2px
+            text-align: center
+            color: #855b43
+            border: 1px #855b43 solid
+            border-radius: 20px
+            padding: 10px 40px
+            
+
+            &:hover
+                background: #855b43
+                color: #fff
+
+#work
+    position: relative
+    padding: 15% 0
+
+    .title
+        text-align: center
+
+        h1
+            font-weight: 600
+            font-size: 2rem
+            letter-spacing: 2px
+            padding: 0 0 10px
+
+        h2
+            font-weight: 600
+
+    ul
+        width: calc( 90% - 100px )
+        margin: 0 auto 3%
+        display: flex
+
+        li
+            width: 30%
+            padding: 3% 1.5% 0
+
+            .t1
+                padding: 15px 0 0
+                text-align: center
+                font-size: 1.5rem
+                font-weight: 600
+                padding: 25px 0 10px
+
+            .t2
+                line-height: 1.5
+
+
+    .btn
+        position: relative
+        display: block
+        width: 80px
+        font-size: 1rem
+        font-weight: 600
+        letter-spacing: 2px
+        text-align: center
+        color: #855b43
+        border: 1px #855b43 solid
+        border-radius: 20px
+        padding: 10px 40px
+        margin: 0 auto
+        
+
+        &:hover
+            background: #855b43
+            color: #fff
+
+/*------------------------------------------
+ *             tablet 、 Mobile
+ *------------------------------------------*/
+ 
+
+@media only screen and (max-width : 1200px)
+
+
+
+@media only screen and (max-width : 720px)
+
+	
+
+
+@media only screen and (max-width : 480px)
+
+	

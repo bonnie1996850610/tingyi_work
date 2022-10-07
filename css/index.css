@@ -1,0 +1,344 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ * * v2.0 | 20110126
+ * * License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Customize
+ * * ==========================================================================*/
+html, body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+/* OFTEN USED
+ * *------------------------------- */
+#browser {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.browser_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 260px;
+  margin-left: -500px/2;
+  margin-top: -260px/2;
+  padding: 40px;
+  margin: -170px 0 0 -290px;
+  background: #FFF;
+  border-radius: 5px;
+  text-align: center;
+}
+.browser_content h1 {
+  margin-bottom: 20px;
+}
+.browser_content p {
+  margin-top: 30px;
+}
+
+.browser_note {
+  color: #666;
+  line-height: 1.7;
+  padding: 0 20px;
+}
+.browser_note .autoWrap {
+  display: inline-block;
+}
+
+.browser_chosen {
+  position: relative;
+  width: 480px;
+  margin: 20px auto 0;
+  overflow: hidden;
+}
+.browser_chosen a {
+  float: left;
+  margin: 0 28px 20px;
+  color: #666;
+  line-height: 1.7;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 599px) {
+  .browser_content {
+    width: 100%;
+    height: auto;
+    padding: 40px 0 0;
+    margin: -235px 0 0 -50%;
+    border-radius: 0;
+  }
+
+  .browser_chosen {
+    width: 240px;
+  }
+}
+/* Set style
+ * * ========================================================================== */
+.topic {
+  position: relative;
+  height: 100vh;
+}
+.topic .bg_font {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  color: #eff1f2;
+  opacity: 0.8;
+  z-index: 2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 15vw;
+  mix-blend-mode: multiply;
+}
+.topic .bg_font:nth-child(2) {
+  top: 45%;
+  left: 55%;
+}
+.topic .learn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.topic .learn img {
+  width: 50%;
+  margin: 0 auto;
+}
+.topic .bg1 {
+  position: absolute;
+  top: 0;
+  right: 0%;
+  width: 30%;
+  opacity: 0.8;
+  z-index: 1;
+  -webkit-animation-name: MoveToRight;
+          animation-name: MoveToRight;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+@-webkit-keyframes MoveToRight {
+  from {
+    right: -100%;
+    opacity: 0;
+  }
+  to {
+    right: 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes MoveToRight {
+  from {
+    right: -100%;
+    opacity: 0;
+  }
+  to {
+    right: 0%;
+    opacity: 0.8;
+  }
+}
+.topic .bg2 {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  width: 25%;
+  z-index: 1;
+  -webkit-animation-name: MoveToLeft;
+          animation-name: MoveToLeft;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+@-webkit-keyframes MoveToLeft {
+  from {
+    left: -100%;
+    opacity: 0;
+  }
+  to {
+    left: 0%;
+    opacity: 1;
+  }
+}
+@keyframes MoveToLeft {
+  from {
+    left: -100%;
+    opacity: 0;
+  }
+  to {
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+#about {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+#about .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #eff1f2;
+  width: 50%;
+  height: 300px;
+  z-index: -1;
+}
+#about .title {
+  padding: 5% 10% 0 15%;
+  width: 20%;
+}
+#about .title h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  padding: 0 0 10px;
+}
+#about .title h2 {
+  font-weight: 600;
+}
+#about .cont {
+  padding: 5% 0 0 0;
+  width: 45%;
+}
+#about .cont p {
+  line-height: 1.5;
+  margin: 0 0 60px;
+}
+#about .cont .btn {
+  position: relative;
+  display: block;
+  width: 80px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #855b43;
+  border: 1px #855b43 solid;
+  border-radius: 20px;
+  padding: 10px 40px;
+}
+#about .cont .btn:hover {
+  background: #855b43;
+  color: #fff;
+}
+
+#work {
+  position: relative;
+  padding: 15% 0;
+}
+#work .title {
+  text-align: center;
+}
+#work .title h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  padding: 0 0 10px;
+}
+#work .title h2 {
+  font-weight: 600;
+}
+#work ul {
+  width: calc(90% - 100px);
+  margin: 0 auto 3%;
+  display: flex;
+}
+#work ul li {
+  width: 30%;
+  padding: 3% 1.5% 0;
+}
+#work ul li .t1 {
+  padding: 15px 0 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 25px 0 10px;
+}
+#work ul li .t2 {
+  line-height: 1.5;
+}
+#work .btn {
+  position: relative;
+  display: block;
+  width: 80px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #855b43;
+  border: 1px #855b43 solid;
+  border-radius: 20px;
+  padding: 10px 40px;
+  margin: 0 auto;
+}
+#work .btn:hover {
+  background: #855b43;
+  color: #fff;
+}
+
+/*------------------------------------------
+ * *             tablet 、 Mobile
+ * *------------------------------------------*/

@@ -1,0 +1,327 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ * * v2.0 | 20110126
+ * * License: none (public domain) */
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Customize
+ * * ==========================================================================*/
+html, body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+/* OFTEN USED
+ * *------------------------------- */
+#browser {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.browser_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 260px;
+  margin-left: -500px/2;
+  margin-top: -260px/2;
+  padding: 40px;
+  margin: -170px 0 0 -290px;
+  background: #FFF;
+  border-radius: 5px;
+  text-align: center;
+}
+.browser_content h1 {
+  margin-bottom: 20px;
+}
+.browser_content p {
+  margin-top: 30px;
+}
+
+.browser_note {
+  color: #666;
+  line-height: 1.7;
+  padding: 0 20px;
+}
+.browser_note .autoWrap {
+  display: inline-block;
+}
+
+.browser_chosen {
+  position: relative;
+  width: 480px;
+  margin: 20px auto 0;
+  overflow: hidden;
+}
+.browser_chosen a {
+  float: left;
+  margin: 0 28px 20px;
+  color: #666;
+  line-height: 1.7;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 599px) {
+  .browser_content {
+    width: 100%;
+    height: auto;
+    padding: 40px 0 0;
+    margin: -235px 0 0 -50%;
+    border-radius: 0;
+  }
+
+  .browser_chosen {
+    width: 240px;
+  }
+}
+/* Set style
+ * * ========================================================================== */
+body {
+  font-size: 14px;
+  color: #000;
+  font-family: "Lato", Arial, Helvetica, "微軟正黑體", sans-serif;
+  background-color: #fff;
+}
+body::-moz-selection {
+  background: #2d437c;
+  color: #fff;
+}
+body::selection {
+  background: #2d437c;
+  color: #fff;
+}
+
+.en {
+  font-family: "Lato", sans-serif;
+}
+
+.tw {
+  font-family: "微軟正黑體", sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 10;
+}
+
+.logo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+.logo a {
+  display: block;
+  text-align: right;
+  margin: 10px;
+}
+.logo a img {
+  width: 150px;
+  height: auto;
+}
+
+.burger {
+  position: fixed;
+  left: 3%;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  background: #855b43;
+  border: 1px solid #855b43;
+  padding: 10px;
+  transition: left 0.5s;
+}
+.burger div {
+  background: #fff;
+  width: 30px;
+  height: 4px;
+  margin: 0 auto 5px;
+  transition: rotate 1s, translate 1s;
+}
+.burger div:nth-child(2) {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.burger p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  margin: 10px 0 0;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.burger:hover {
+  background: #fff;
+}
+.burger:hover div {
+  background: #855b43;
+}
+.burger:hover p {
+  color: #855b43;
+}
+
+nav .menu {
+  position: fixed;
+  width: 30%;
+  height: 100vh;
+  margin-right: 10%;
+  z-index: 20;
+  background: rgba(239, 241, 242, 0.9);
+  left: -30%;
+  transition: left 0.5s;
+}
+nav .menu ul {
+  margin: 30% 0 0 10%;
+}
+nav .menu ul li {
+  padding: 1% 0;
+  margin-bottom: 5%;
+}
+nav .menu ul li a {
+  display: block;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+nav .menu ul li a:hover {
+  color: #9c8070;
+}
+nav .menu ul li p {
+  line-height: 1.5;
+}
+nav .menu .logo {
+  position: absolute;
+  background: none;
+  top: 3%;
+  left: 3%;
+}
+
+.nav-open .menu {
+  left: 0;
+}
+.nav-open .burger {
+  left: 30%;
+}
+.nav-open .burger div:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+.nav-open .burger div:nth-child(2) {
+  opacity: 0;
+}
+.nav-open .burger div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+::-moz-selection {
+  background: #855b43;
+  color: #fff;
+}
+
+::selection {
+  background: #855b43;
+  color: #fff;
+}
+
+.scrolltop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #9c8070;
+  z-index: 20;
+  cursor: pointer;
+}
+.scrolltop:hover {
+  background: #855b43;
+}
+.scrolltop i {
+  font-size: 30px;
+  padding: 3px 10px 8px;
+  color: #fff;
+}
+
+footer .inner {
+  position: relative;
+  margin: 0 auto;
+  background: #fff;
+  height: 40px;
+  text-align: center;
+}
+
+.wrapper {
+  position: relative;
+}
+
+/*------------------------------------------
+ * *             tablet 、 Mobile
+ * *------------------------------------------*/

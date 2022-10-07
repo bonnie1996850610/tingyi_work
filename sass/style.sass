@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300')
+@import reset
+@import customize
+@import browserUpdate
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap')
+
+/* Set style
+ * ========================================================================== */
+
+body
+    font-size: 14px
+    color: #000
+    font-family: 'Lato', Arial, Helvetica, "微軟正黑體", sans-serif
+    background-color: #fff
+    // -moz-user-select: none
+    // -webkit-user-select: none
+
+    &::selection
+        background: #2d437c
+        color: #fff
+
+.en
+    font-family: 'Lato',sans-serif
+
+.tw
+    font-family: "微軟正黑體", sans-serif
+
+header
+    position: absolute
+    top: 0
+    width: 100%
+    background: rgba(256,256,256,0.8)
+    z-index: 10
+
+.logo
+    position: fixed
+    top: 0
+    right: 0
+    background: rgba(256,256,256,0.8)
+
+    a
+        display: block
+        text-align: right
+        margin: 10px
+
+        img
+            width: 150px
+            height: auto
+
+.burger
+    position: fixed
+    left: 3%
+    top: 45%
+    transform: translateY(-50%)
+    z-index: 10
+    cursor: pointer
+    background: #855b43
+    border: 1px solid #855b43
+    padding: 10px
+    transition: left 0.5s
+    // width: 60px
+    // height: 60px
+
+
+    div
+        background: #fff
+        width: 30px
+        height: 4px
+        margin: 0 auto 5px
+        transition: rotate 1s ,translate 1s
+
+        &:nth-child(2)
+            opacity: 1
+            transition: opacity 0.5s
+            
+
+    p
+        font-family: Arial, Helvetica, sans-serif
+        font-size: .8rem
+        margin: 10px 0 0
+        text-align: center
+        letter-spacing: 2px
+        color: #fff
+
+    &:hover
+        background: #fff
+        div
+            background: #855b43
+        p
+            color: #855b43
+nav
+    .menu
+        position: fixed
+        width: 30%
+        height: 100vh
+        margin-right: 10% 
+        z-index: 20
+        background: rgba(239,241,242,0.9)
+        left: -30%
+        transition: left 0.5s
+
+        ul
+            margin: 30% 0 0 10%
+
+            li
+                padding: 1% 0
+                margin-bottom: 5%
+
+                a
+                    display: block
+                    color: #000
+                    font-family: Arial, Helvetica, sans-serif
+                    font-size: 2rem
+                    font-weight: 600
+                    letter-spacing: 2px
+                    padding-bottom: 10px
+
+                    &:hover
+                        color: #9c8070 
+
+                p
+                    line-height: 1.5
+
+
+        .logo
+            position: absolute
+            background: none
+            top: 3%
+            left: 3%
+        
+
+.nav-open
+    .menu
+        left: 0 
+
+    .burger
+        left: 30%
+
+        div
+            &:nth-child(1)
+                transform: rotate(45deg) translate(7px,7px)
+
+            &:nth-child(2)
+                opacity: 0
+
+            &:nth-child(3)
+                transform: rotate(-45deg) translate(5px,-5px)
+
+
+::selection
+    background: #855b43 //背景
+    color: #fff //文字顏色
+
+.scrolltop
+    position: fixed
+    bottom: 20px
+    right: 20px
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background: #9c8070
+    z-index: 20
+    cursor: pointer
+
+    &:hover
+        background: #855b43
+
+    i 
+        font-size: 30px
+        padding: 3px 10px 8px
+        color: #fff
+
+
+footer
+
+    .inner
+        position: relative
+        margin: 0 auto
+        background: #fff
+        height: 40px
+        text-align: center
+
+
+.wrapper
+    position: relative
+
+
+@import media

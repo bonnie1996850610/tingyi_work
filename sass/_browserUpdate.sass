@@ -1,0 +1,57 @@
+#browser
+	position: fixed	
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: rgba(0, 0, 0, 0.8)
+	z-index: 9999
+	cursor: pointer
+
+.browser_content
+	position: absolute
+	top: 50%
+	left: 50%
+	width: 500px
+	height: 260px
+	margin-left: -500px/2
+	margin-top:  -260px/2
+	padding: 40px
+	margin: -170px 0 0 -290px
+	background: #FFF
+	border-radius: 5px	
+	text-align: center
+	h1
+		margin-bottom: 20px
+	p
+		margin-top: 30px
+
+.browser_note
+	color: #666
+	line-height: 1.7
+	padding: 0 20px
+	.autoWrap
+		display: inline-block
+
+.browser_chosen
+	position: relative
+	width: 480px
+	margin: 20px auto 0
+	overflow: hidden
+	a
+		float: left
+		margin: 0 28px 20px
+		color: #666
+		line-height: 1.7
+		font-size: 12px
+
+@media only screen and (max-width : 599px)
+	.browser_content
+		width: 100%
+		height: auto
+		padding: 40px 0 0
+		margin: -235px 0 0 -50%
+		border-radius: 0
+	
+	.browser_chosen
+		width: 240px
